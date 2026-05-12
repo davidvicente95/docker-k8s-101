@@ -1,0 +1,20 @@
+NAME                           READY   STATUS             RESTARTS      AGE
+pod/api-7ddf76f86c-kr7wg       0/1     ImagePullBackOff   0             2m1s
+pod/api-7ddf76f86c-pbn9m       0/1     ImagePullBackOff   0             2m1s
+pod/db-0                       1/1     Running            0             2m1s
+pod/dev-api-7b5d488f59-sd2bc   0/1     ImagePullBackOff   0             26m
+pod/dev-api-8b6bd547-67rl8     0/1     ImagePullBackOff   0             27m
+pod/dev-api-8b6bd547-7zbtk     0/1     ImagePullBackOff   0             27m
+pod/dev-db-0                   1/1     Running            1 (20m ago)   27m
+pod/etl-cron-29643299-zstbb    0/1     ImagePullBackOff   0             114s
+pod/etl-cron-29643300-s8c99    0/1     ImagePullBackOff   0             54s
+pod/manual-evidencia-g6f6z     0/1     ErrImagePull       0             10s
+
+NAME              TYPE        CLUSTER-IP      EXTERNAL-IP   PORT(S)    AGE
+service/api       ClusterIP   10.96.191.43    <none>        8000/TCP   2m1s
+service/db        ClusterIP   10.96.172.184   <none>        5432/TCP   2m1s
+service/dev-api   ClusterIP   10.96.18.129    <none>        8000/TCP   27m
+service/dev-db    ClusterIP   10.96.20.112    <none>        5432/TCP   27m
+
+NAME                     SCHEDULE      SUSPEND   ACTIVE   LAST SCHEDULE   AGE
+cronjob.batch/etl-cron   */1 * * * *   False     2        54s             2m1s

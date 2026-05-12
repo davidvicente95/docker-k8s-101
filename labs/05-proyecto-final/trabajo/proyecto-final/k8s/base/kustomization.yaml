@@ -1,0 +1,11 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+resources:
+  - 00-namespace.yaml
+  - 01-db.yaml
+  - 02-api.yaml
+  - 03-etl-cronjob.yaml
+
+commonLabels:
+  app.kubernetes.io/part-of: proyecto-final
